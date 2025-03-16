@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Next_Word</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+        <script src="{{ url_for('static', filename='script.js') }}"> </script> 
+    </head>
+
+    <body>
+        <h1> Next_word </h1>
+        <p> this is the next text recommendation website. </p> 
+        <input type="text", id="user_input", placeholder="Type here..." />
+        <button onclick="predictWord()"> Predict</button>
+        <p><strong>Prediction: </strong> <span id="predictedResult"></span></p>
+    </body>
+</html> 
