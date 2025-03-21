@@ -19,6 +19,7 @@ with open('tokenizer.pkl', 'rb') as handle:
 # defining max length based on training 
 max_length = 100
 
+# Next-Word Prediction Function
 def predict_next_word(seed_text, num_words=1):
   for _ in range(num_words):
     token_list = tokenizer.texts_to_sequences([seed_text])[0]
@@ -72,4 +73,5 @@ def correct():
     return jsonify({"corrected_sentence": corrected})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # for local development, use: app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
