@@ -3,6 +3,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from nltk.corpus import wordnet
+from textblob import TextBlob
 import pickle
 
 app = Flask(__name__)
@@ -45,6 +47,20 @@ def predict():
     num_words = int(data.get("num_words", 1))
     predicted_text = predict_next_word(text, num_words)
     return jsonify({"predicted_text": predicted_text})
+
+@app.route("/meaning", methods=["POST"])
+def meaning():
+    data = request.json
+    word = data.get("word", "")
+    meaning = get_word_meaning(word)
+    return jsonify({"meaning": meaning})
+
+@app.route("/correct", methods=["POST"])
+def correct():
+    data = request.json
+    sentence = data.get("sentence", "")
+    corrected = correct_sentence(sentence)
+    return jsonify({"corrected_sentence": corrected})
 
 if __name__ == "__main__":
     app.run(debug=True)
