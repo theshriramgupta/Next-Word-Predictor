@@ -34,6 +34,15 @@ def predict_next_word(seed_text, num_words=1):
   return seed_text
 
 
+# Word Meaning Lookup
+def get_word_meaning(word):
+    synsets = wordnet.synsets(word)
+    return synsets[0].definition() if synsets else "No meaning found."
+
+# Sentence Correction
+def correct_sentence(text):
+    return str(TextBlob(text).correct())
+
 # define Routes
 
 @app.route('/')
