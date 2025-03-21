@@ -4,7 +4,7 @@
 
 This is a **web-based NLP assistant** that provides:
 
-- **Next-word prediction** while typing
+- **Next-word prediction**
 
 - **Word meaning** lookup using WordNet
 
