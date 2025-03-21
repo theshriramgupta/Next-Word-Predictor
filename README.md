@@ -42,8 +42,8 @@ The project is built using Python (Flask), TensorFlow, NLTK, TextBlob, and a web
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/NLP-Assistant.git
-cd NLP-Assistant
+git clone https://github.com/theshriramgupta/Next-Word-Predictor.git
+cd Next-Word-Predictor
 ```
 ### 2️⃣ Install Dependencies
 ```bash
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 ```
 ### 3️⃣ Train the Model (Optional, if not using provided model)
 ```bash
-python train_model.py
+python next_word_predict.py
 ```
 ### 4️⃣ Run the Flask Server
 ```bash
