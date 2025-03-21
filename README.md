@@ -24,17 +24,17 @@ The project is built using Python (Flask), TensorFlow, NLTK, TextBlob, and a web
 
 ## 🏗️ Project Structure
 
-/NLP-Assistant
-│-- /static
-│   │-- script.js  # JavaScript for frontend interaction
-│-- /templates
-│   │-- index.html  # Main web page
-│-- app.py  # Flask backend
-│-- train_model.py  # Model training script
-│-- model.h5  # Trained LSTM model
-│-- tokenizer.pkl  # Saved tokenizer
-│-- requirements.txt
-│-- README.md
+/NLP-Assistant        
+│-- /static             
+│   │-- script.js  # JavaScript for frontend interaction             
+│-- /templates           
+│   │-- index.html  # Main web page       
+│-- app.py  # Flask backend         
+│-- train_model.py  # Model training script           
+│-- model.h5  # Trained LSTM model           
+│-- tokenizer.pkl  # Saved tokenizer           
+│-- requirements.txt            
+│-- README.md           
 
 ---
 ## 📥 Installation & Setup Instructions
